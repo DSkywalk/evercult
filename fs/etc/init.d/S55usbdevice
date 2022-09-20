@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+# setup configfs for adbd and usb mass storage....
+#
+
+USB_ROOT="/sys/kernel/config/usb_gadget/rockchip"
+
+case "$1" in
+start)
+	echo "none" > "${USB_ROOT}"/UDC
+	mkdir /dev/usb-ffs/adb -m 0770
+	# ADD_IDPRODUCT
+	#echo 0x2207 > "${USB_ROOT}"/idVendor
+	echo 0x0006 > "${USB_ROOT}"/idProduct
+	echo "0123456789ABCDEF" > "${USB_ROOT}"/strings/0x409/serialnumber
+
+	# INIT_FUNCTIONS
+	mkdir "${USB_ROOT}"/functions/ffs.adb
+	ln -s "${USB_ROOT}"/functions/ffs.adb "${USB_ROOT}"/configs/b.1/f1	
+
+	# INIT_CONFIG
+	# echo "hid" > "${USB_ROOT}"/configs/b.1/strings/0x409/configuration
+	echo "adb" > "${USB_ROOT}"/configs/b.1/strings/0x409/configuration
+
+	# START_APP_BEFORE_UDC
+	mkdir -p /dev/usb-ffs/adb
+	mount -o uid=2000,gid=2000 -t functionfs adb /dev/usb-ffs/adb
+	export service_adb_tcp_port=5555
+	adbserver&
+	sleep 1 &&
+	
+	UDC=`ls /sys/class/udc/| awk '{print $1}'`
+	echo $UDC > "${USB_ROOT}"/UDC
+	# START_APP_AFTER_UDC
+
+	;;
+stop)
+	echo "none" > "${USB_ROOT}"/UDC
+	;;
+restart|reload)
+	;;
+*)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit 0
