@@ -2,7 +2,8 @@
 
 ![the evercult](https://user-images.githubusercontent.com/560310/191311366-bb2f7448-fb5f-4c1c-bcc2-0e604c8c28ef.png)
 
-
+* https://github.com/strager/evercade-hacking
+* https://github.com/RetroFailz/everfw
 
 # patch FS to recover adb - tested on fw 2.0.2
 
