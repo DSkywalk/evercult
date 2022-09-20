@@ -33,3 +33,17 @@ pack and upload new FS:
 
     $ sudo mksquashfs rootfs rootfs-patch.img
     $ sudo rkdeveloptool wlx rootfs rootfs-patch.img
+
+# Boot Evercade in flash mode
+## Evercade VS
+
+1. Hold down the small gray button on the backside of your VS while powering it on.
+2. A white light will flash once if it's done correctly.
+
+## Evercade LCD (red)
+
+1. Connect your Evercade to your computer using a USB cable.
+2. Turn off your Evercade.
+   Your Evercade's power LED should be orange.
+3. Hold your Evercade's menu button, then turn on your Evercade.
+   Your Evercade's screen should be blank, and its power LED should still be orange.
