@@ -1,6 +1,8 @@
 # evercult
 
-![the evercult](https://user-images.githubusercontent.com/560310/191307322-bdafc592-f1d8-43f9-bdb8-21172e74eb58.png)
+![the evercult](https://user-images.githubusercontent.com/560310/191311366-bb2f7448-fb5f-4c1c-bcc2-0e604c8c28ef.png)
+
+
 
 # patch FS to recover adb - tested on fw 2.0.2
 
@@ -27,5 +29,6 @@ copy `adbservice` to `/usr/bin/` and `S55usbdevice` to `/etc/init.d/`. And set +
     $ chmod +x rootfs/etc/init.d/S55usbdevice
 
 pack and upload new FS:
+
     $ sudo mksquashfs rootfs rootfs-patch.img
     $ sudo rkdeveloptool wlx rootfs rootfs-patch.img
