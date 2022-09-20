@@ -54,3 +54,6 @@ pack and upload new FS:
     adb shell
     adb pull /dev/mmcblk0 cart.img
     adb push myfile.txt /tmp/
+
+# libretro
+* CAP32 patches - https://github.com/libretro/libretro-cap32/commit/1b0fbccc13547552682090489bc267fa47b1d0cf
