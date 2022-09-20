@@ -37,7 +37,7 @@ pack and upload new FS:
 # Boot Evercade in flash mode
 ## Evercade VS
 
-1. Connect MicroUSB Data Cable in VS and PC
+1. Connect MicroUSB Data Cable in VS and PC.
 2. Hold down the small gray button on the backside of your VS while powering it on.
 3. A white light will flash once if it's done correctly.
 
