@@ -48,3 +48,7 @@ pack and upload new FS:
    Your Evercade's power LED should be orange.
 3. Hold your Evercade's menu button, then turn on your Evercade.
    Your Evercade's screen should be blank, and its power LED should still be orange.
+
+# dumps
+
+    adb pull /dev/mmcblk0 cart.img
