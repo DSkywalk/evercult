@@ -16,7 +16,7 @@
     04  00028100  cfg
     05  00029100  userdata
 
-use rkdeveloptool for dump current FW:
+use [rkdeveloptool](https://github.com/rockchip-linux/rkdeveloptool) for dump current FW:
 
     $ sudo rkdeveloptool rl 0x00007800 $((0x00028100 - 0x00007800)) 03-rootfs.img
 
