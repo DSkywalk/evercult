@@ -26,7 +26,7 @@ start)
 	mkdir -p /dev/usb-ffs/adb
 	mount -o uid=2000,gid=2000 -t functionfs adb /dev/usb-ffs/adb
 	export service_adb_tcp_port=5555
-	adbserver&
+	adbservice&
 	sleep 1 &&
 	
 	UDC=`ls /sys/class/udc/| awk '{print $1}'`
