@@ -32,3 +32,5 @@
 ##  *PA1AE
  * CORE USED: MAMUEV_TH.so
  * SDPATH: mame/${ROMPATH_IN_CUE}
+
+Performance Mode: _"${LAUNCHER}" = "0" ] || [ "${LAUNCHER}" = "5" ] || [ "${LAUNCHER}" = "2" ] || [ "${LAUNCHER}" = "3" ] || [ "${LAUNCHER}" = "6" ] || [ "${LAUNCHER}" = "9"_
